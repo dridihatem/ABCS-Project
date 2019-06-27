@@ -6,19 +6,19 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                      Whithholding Lists
+                      Certificates List
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                          </span>
                     </header>
                     <div class="panel-body">
 
-                       <form class="cmxform " id="commentForm" method="get" action="recherche.php">
+                       <form class="cmxform " id="commentForm" method="get" action="rechercheRetenu.php">
                        
                            <div class="col-md-8" style="background: #f1f1f1;border-radius: 10px 0px 0px 10px;padding: 10px;height: 148px;">
 
                            <div class="form-group col-md-12">
-                                        <label for="cname" class="control-label">Registration number</label>
+                                        <label for="cname" class="control-label">Personal number</label>
                                         <br />
                                        <select id="e2" style="width:300px" class="populate " name="id_client" required="">
                                                 <option value=""></option>
@@ -34,26 +34,7 @@
                                                 
                                             </select>
                             </div>
-                            <div class="form-group col-md-6">
-                                        <label for="d" class="control-label">Month</label>
-                                        <br />
-                                        
-                                             <select id="e1" style="width:300px" class="populate " name="mois" required="">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                 </select>
-                                       
-                            </div>    
+                           
                             <div class="form-group col-md-6">
                                         <label for="y" class="control-label">Year</label>
                                         <br />
@@ -75,7 +56,7 @@
                                        
                             </div>    
                         </div>
-                        <div class="col-md-3"  style="background: #f1f1f1;border-radius: 0px 10px 10px 0px;padding: 57px;height: 148px;">
+                        <div class="col-md-3"  style="background: #f1f1f1;border-radius: 0px 10px 10px 0px;padding: 57px;height: 100%;">
 
                                      <div class="form-group ">
                                        
@@ -98,11 +79,10 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Registration number</th>
+                        <th>Personal number</th>
                         <th>Name</th>
                         <th>Surname</th>
-                        <th>For month</th>
-                        <th>For year</th>
+                        <th>Year</th>
                         <th>File</th>
                         <th>Inserted date</th>
                     </tr>
@@ -111,8 +91,8 @@
                         <?php 
                         
                         $query = "";
-                        if(isset($_GET['matricule']) && !empty($_GET['matricule']) && isset($_GET['mois']) && !empty($_GET['mois'])  && isset($_GET['annee']) && !empty($_GET['annee'])){
-                            $query = "AND id_client = ".$_GET['matricule']." && mois =".$_GET['mois']." && annee = ".$_GET['annee']."";
+                        if(isset($_GET['matricule']) && !empty($_GET['matricule'])  && isset($_GET['annee']) && !empty($_GET['annee'])){
+                            $query = "AND id_client = ".$_GET['matricule']."  && annee = ".$_GET['annee']."";
 
                         }
                          
@@ -123,53 +103,13 @@
                             $i++;
                             $account_client = new Accounts();
                             $account_client->getFromDB($res_account['id_client']);
-                            $month = $res_account['mois'];
-                           switch ($month) {
-    case 1:
-        $month_select = "January";
-        break;
-    case 2:
-        $month_select = "February";
-        break;
-    case 3:
-        $month_select = "March";
-        break;
-         case 4:
-        $month_select = "April";
-        break;
-         case 5:
-        $month_select = "May";
-        break;
-         case 6:
-        $month_select = "June";
-        break;
-         case 7:
-        $month_select = "July";
-        break;
-         case 8:
-        $month_select = "August";
-        break;
-         case 9:
-        $month_select = "September";
-        break;
-         case 10:
-        $month_select = "October";
-        break;
-         case 11:
-        $month_select = "November";
-        break;
-         case 12:
-        $month_select = "December";
-        break;
-
-}
+                            
                              ?>
                          <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $account_client->getMatricule(); ?></td>
                         <td><?php echo $account_client->getNom(); ?></td>
                         <td><?php echo $account_client->getPrenom(); ?></td>
-                        <td><?php echo $month_select; ?></td>
                         <td><?php echo $res_account['annee']; ?></td>
                         <td><a href="documents/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
                         <td><?php echo date("d-m-Y",strtotime($res_account['date_creation'])); ?></td>

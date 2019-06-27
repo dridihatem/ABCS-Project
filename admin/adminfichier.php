@@ -7,7 +7,7 @@
                     <ul class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                         <li><a href="#">Client</a></li>
-                        <li class="active">Add or Update account</li>
+                        <li class="active">Folder</li>
                     </ul>
                     <!--breadcrumbs end -->
                 </div>

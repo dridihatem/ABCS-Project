@@ -10,9 +10,9 @@ class DB
     public function connect()
     {
         $this->servername ="localhost";
-        $this->username ="root";
-        $this->password ="";
-        $this->dbname ="fichepaie";
+        $this->username ="abcscomt_abcscomt";
+        $this->password ="6_#3amI#Ybrv";
+        $this->dbname ="abcscomt_abcs";
         /*$this->servername ="localhost";
      $this->username ="administap4glam";
      $this->password ="fxwS88MYCHRjMLa6";

@@ -116,7 +116,7 @@ $fiche->getFromDB($_GET['id']);
 
                                             echo '
                                             <div class="gallery-item" style="background: #415160;border-radius: 10px;padding: 8px;width: 108px;margin: 0 auto;">
-                                            <a href="documents/'.$client->getMatricule().'/'.$filee.'" target="_blank"><img src="assets/images/pdf2.png" style="width: 50px;"/></a>';
+                                            <a href="../admin/documents/'.$client->getMatricule().'/'.$filee.'" target="_blank"><img src="assets/images/pdf2.png" style="width: 50px;"/></a>';
                                             echo ' <a href="controller/fiche_save.php?idMod='.$_GET['id'].'&op=5&pg=formRetenu" style="color:#FFF;"><i class="fa fa-trash"></i> Supprimer</a>';
                                             echo '<div>';
                                         }

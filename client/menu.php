@@ -17,7 +17,7 @@
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
-            <h3 class="no-padding" style="margin-top: 0px;">Payslip Portal</h3>
+            <h3 class="no-padding" style="margin-top: 0px;">Pay Portal</h3>
 
             
         </li>
@@ -35,11 +35,11 @@
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="assets/images/avatar1_small.jpg">
-                <span class="username"><?php echo $_SESSION['matricule']; ?></span>
+                <span class="username"><?php echo $_SESSION['fullnale']; ?></span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><a href="index.php?pg=formClient&id=<?= $_SESSION['idClient']; ?>"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                <li><a href="index.php?pg=formClient&id=<?= $_SESSION['idClient']; ?>"><i class=" fa fa-suitcase"></i>My Profile</a></li>
                 <li><a href="index.php?disconnect"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
@@ -69,7 +69,7 @@
                         <span>Payslip</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="index.php?pg=adminFiche">All Payslip</a></li>
+                        <li><a href="index.php?pg=adminFiche">All Payslips</a></li>
                         <li><a href="index.php?pg=adminFilterFiche">Search</a></li>
 
                     </ul>
@@ -80,7 +80,7 @@
                         <span>Withholding Tax Certificate</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="index.php?pg=adminRetenu">All Whithholding</a></li>
+                        <li><a href="index.php?pg=adminRetenu">All Cetificates</a></li>
                         <li><a href="index.php?pg=adminFilterRetenu">Search</a></li>
 
                     </ul>

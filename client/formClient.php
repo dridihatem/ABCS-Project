@@ -25,14 +25,23 @@
                              </span>
                         </header>
                         <div class="panel-body">
-                            <?php require("msg.php");?>
+                            <?php require("msg.php");
+                            if(isset($_GET['msg']) && $_GET['msg']=="error"){
+                                echo '<div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.
+    </div>
+    ';
+                            }
+                            ?>
+
                             <div class=" form">
                                 <form class="cmxform form-horizontal " id="commentForm" action="controller/account_save.php?op=<?php if($_GET["id"]== 0){echo "1&pg=adminClient";}else{echo "2&pg=formClient";}?>" method="post" enctype="multipart/form-data">
                                     <input type="hidden" value="<?php if($_GET['id']!=0){echo $account->getId();} ?>" name="id">
-                                    <input type="hidden" value="<?php if($_GET['id']!=0){echo $account->getActive();} ?>" name="avtive">
+                                    <input type="hidden" value="<?php if($_GET['id']!=0){echo $account->getActive();} ?>" name="active">
 
                                     <div class="form-group ">
-                                        <label for="matricule" class="control-label col-lg-3">Registration number</label>
+                                        <label for="matricule" class="control-label col-lg-3">Personal number</label>
                                         <div class="col-lg-6">
                                             <input class=" form-control" id="matricule" readonly="" name="matricule" minlength="2" type="text" required value="<?php if($_GET['id']!=0){echo $account->getMatricule();} ?>"/>
                                             <span id="disp"></span>
@@ -55,19 +64,19 @@
                                     <div class="form-group ">
                                         <label for="nom" class="control-label col-lg-3">Name</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="nom" name="nom" minlength="2" type="text" required  value="<?php if($_GET['id']!=0){echo $account->getNom();} ?>"/>
+                                            <input class=" form-control" id="nom" name="nom" readonly=""  minlength="2" type="text" required  value="<?php if($_GET['id']!=0){echo $account->getNom();} ?>"/>
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label for="prenom" class="control-label col-lg-3">Surname</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="prenom" name="prenom" minlength="2" type="text" required  value="<?php if($_GET['id']!=0){echo $account->getPrenom();} ?>"/>
+                                            <input class=" form-control" id="prenom" name="prenom" readonly=""  minlength="2" type="text" required  value="<?php if($_GET['id']!=0){echo $account->getPrenom();} ?>"/>
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label for="email" class="control-label col-lg-3">E-mail</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="email" name="email" minlength="2" type="email" required  value="<?php if($_GET['id']!=0){echo $account->getEmail();} ?>"/>
+                                            <input class=" form-control" id="email" name="email" readonly=""  minlength="2" type="email" required  value="<?php if($_GET['id']!=0){echo $account->getEmail();} ?>"/>
                                         </div>
                                     </div>
                                    

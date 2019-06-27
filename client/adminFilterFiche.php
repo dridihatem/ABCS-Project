@@ -6,7 +6,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                      Paylist Lists
+                      PaySlips List
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                          </span>
@@ -15,13 +15,13 @@
 
                        <form class="cmxform " id="commentForm" method="get" action="recherche.php">
                        
-                           <div class="col-md-8" style="background: #f1f1f1;border-radius: 10px 0px 0px 10px;padding: 10px;height: 148px;">
+                           <div class="col-md-8" style="background: #f1f1f1;border-radius: 10px 0px 0px 10px;padding: 10px;height: 100%;">
 
                            <div class="form-group col-md-12">
-                                        <label for="cname" class="control-label">Registration number</label>
+                                        <label for="cname" class="control-label">Personal number</label>
                                         <br />
                                        <select id="e2" style="width:300px" class="populate " name="id_client" required="">
-                                                <option value=""></option>
+                                              
                                                 <?php
                                                 $accont = $conn->query("SELECT * FROM ".$_SESSION['pfx']."_accounts WHERE id =".$_SESSION['idClient']." ORDER BY nom");
                                                 while($res_acount = $accont->fetch_assoc()){
@@ -98,13 +98,12 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Registration number</th>
+                        <th>Personal number</th>
                         <th>Name</th>
                         <th>Surname</th>
-                        <th>For month</th>
-                        <th>For year</th>
+                        <th>Month</th>
+                        <th>Year</th>
                         <th>File</th>
-                        <th>Inserted date</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -171,8 +170,8 @@
                         <td><?php echo $account_client->getPrenom(); ?></td>
                         <td><?php echo $month_select; ?></td>
                         <td><?php echo $res_account['annee']; ?></td>
-                        <td><a href="documents/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
-                        <td><?php echo date("d-m-Y",strtotime($res_account['date_creation'])); ?></td>
+                        <td><a href="../admin/documents/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
+
                         
                     </tr>
                     <?php 

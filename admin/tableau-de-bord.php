@@ -58,7 +58,7 @@
                                 <i class="fa fa-user"></i>
                             </div>
                             <div class="value">
-                                <i class="fa fa-plus-square"></i>
+                                <a href="index.php?pg=formClient&id=0"><i class="fa fa-plus-square"></i></a>
                                 <p><a href="index.php?pg=formClient&id=0">Add new User</a></p>
                                 
                             </div>
@@ -67,7 +67,7 @@
     <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg">
-                                <i class="fa fa-book" style="color:#FFF;"></i>
+                                <a href="index.php?pg=formFiche&id=0"><i class="fa fa-book" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #fa8564;">
                                 <i class="fa fa-plus-square"></i>
@@ -79,11 +79,11 @@
      <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol terques-bg">
-                                <i class="fa fa-bullhorn" style="color:#FFF;"></i>
+                               <a href="index.php?pg=formRetenu&id=0"> <i class="fa fa-bullhorn" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #1fb5ad;">
-                                <i class="fa fa-plus-square"></i>
-                                <p><a href="index.php?pg=formWithholding&id=0">Add new Whithholding</a></p>
+                                <a href="index.php?pg=formRetenu&id=0"><i class="fa fa-plus-square"></i></a>
+                                <p><a href="index.php?pg=formRetenu&id=0">Add new Certificate</a></p>
                                 
                             </div>
                         </section>
@@ -91,11 +91,11 @@
     <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg" style="background:#32323a;">
-                                <i class="fa fa-cogs" style="color:#FFF;"></i>
+                               <a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>"> <i class="fa fa-cogs" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #32323a;">
-                                <i class="fa fa-plus-square"></i>
-                                <p><a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>">My profile</a></p>
+                                <a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>"><i class="fa fa-plus-square"></i></a>
+                                <p><a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>">My Profile</a></p>
                                 
                             </div>
                         </section>

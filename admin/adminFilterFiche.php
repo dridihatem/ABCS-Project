@@ -6,7 +6,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                      Paylist Lists
+                      Payslips List
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                          </span>
@@ -18,7 +18,7 @@
                            <div class="col-md-8" style="background: #f1f1f1;border-radius: 10px 0px 0px 10px;padding: 10px;height: 148px;">
 
                            <div class="form-group col-md-12">
-                                        <label for="cname" class="control-label">Registration number</label>
+                                        <label for="cname" class="control-label">Personal number</label>
                                         <br />
                                        <select id="e2" style="width:300px" class="populate " name="id_client" required="">
                                                 <option value=""></option>
@@ -75,7 +75,7 @@
                                        
                             </div>    
                         </div>
-                        <div class="col-md-3"  style="background: #f1f1f1;border-radius: 0px 10px 10px 0px;padding: 57px;height: 148px;">
+                        <div class="col-md-3"  style="background: #f1f1f1;border-radius: 0px 10px 10px 0px;padding: 57px;height: 100%;">
 
                                      <div class="form-group ">
                                        
@@ -98,11 +98,11 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Registration number</th>
+                        <th>Personal number</th>
                         <th>Name</th>
                         <th>Surname</th>
-                        <th>For month</th>
-                        <th>For year</th>
+                        <th>Month</th>
+                        <th>Year</th>
                         <th>File</th>
                         <th>Inserted date</th>
                     </tr>

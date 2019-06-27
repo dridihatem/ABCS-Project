@@ -1,8 +1,8 @@
 <?php
-define("host", "mail.dridihatem.com");
+define("host", "serv7.zenhosting.info");
 define("SMTPAuth", "true");
-define("username","info@dridihatem.com");
-define("password","metallica@123##");
+define("username","info@abcs.com.tn");
+define("password","AhHSef$%Ttg(");
 define("SMTPSecure","ssl");
 define("Port","465");
 

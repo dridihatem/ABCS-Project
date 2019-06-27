@@ -31,6 +31,8 @@ $fiche->getFromDB($_GET['id']);
                                 <form class="cmxform form-horizontal " id="commentForm" action="controller/fiche_save.php?op=<?php if($_GET["id"]== 0){echo "1&pg=adminRetenu";}else{echo "2&pg=formRetenu";}?>" method="post" enctype="multipart/form-data">
                                     <input type="hidden" value="<?php if($_GET['id']!=0){echo $fiche->getId();} ?>" name="id">
                                     <input name="pdf" type="hidden" id="id" value="<?php if ($_GET["id"]!= 0){echo $fiche->getPdf();}?>"/>
+                                    <input name="mois" type="hidden" id="id" value="0"/>
+                                    
                                     <input name="date_creation" type="hidden" id="id" value="<?php if ($_GET["id"]!= 0){echo $fiche->getDate_creation();}?>"/>
                                      <input name="type" type="hidden" id="id" value="2"/>
 
@@ -53,30 +55,7 @@ $fiche->getFromDB($_GET['id']);
                                         </div>
                                     </div>
 
-                                    <div class="form-group ">
-
-
-                                        <label for="mois" class="control-label col-lg-3">Month</label>
-                                        <div class="col-lg-6">
-                                  
-                                 <select id="e1" style="width:300px" class="populate " name="mois" required="">
-                                    <option value="1" <?php  if($_GET['id']!=0){if($fiche->getMois()==1){echo "selected";} else {echo NULL;}}?>>January</option>
-                                    <option value="2" <?php  if($_GET['id']!=0){if($fiche->getMois()==2){echo "selected";} else {echo NULL;}}?>>February</option>
-                                    <option value="3" <?php  if($_GET['id']!=0){if($fiche->getMois()==3){echo "selected";} else {echo NULL;}}?>>March</option>
-                                    <option value="4" <?php  if($_GET['id']!=0){if($fiche->getMois()==4){echo "selected";} else {echo NULL;}}?>>April</option>
-                                    <option value="5" <?php  if($_GET['id']!=0){if($fiche->getMois()==5){echo "selected";} else {echo NULL;}}?>>May</option>
-                                    <option value="6" <?php  if($_GET['id']!=0){if($fiche->getMois()==6){echo "selected";} else {echo NULL;}}?>>June</option>
-                                    <option value="7" <?php  if($_GET['id']!=0){if($fiche->getMois()==7){echo "selected";} else {echo NULL;}}?>>July</option>
-                                    <option value="8" <?php  if($_GET['id']!=0){if($fiche->getMois()==8){echo "selected";} else {echo NULL;}}?>>August</option>
-                                    <option value="9" <?php  if($_GET['id']!=0){if($fiche->getMois()==9){echo "selected";} else {echo NULL;}}?>>September</option>
-                                    <option value="10" <?php  if($_GET['id']!=0){if($fiche->getMois()==10){echo "selected";} else {echo NULL;}}?>>October</option>
-                                    <option value="11" <?php  if($_GET['id']!=0){if($fiche->getMois()==11){echo "selected";} else {echo NULL;}}?>>November</option>
-                                    <option value="12" <?php  if($_GET['id']!=0){if($fiche->getMois()==12){echo "selected";} else {echo NULL;}}?>>December</option>
-                                 </select>
-                          
-
-                                        </div>
-                                    </div>
+                                   
                                     <div class="form-group ">
                                         <label for="year" class="control-label col-lg-3">Year</label>
                                         <div class="col-lg-6">

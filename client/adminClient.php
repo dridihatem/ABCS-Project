@@ -18,7 +18,7 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Registration number</th>
+                        <th>Personal number</th>
                         <th>Name</th>
                         <th>Surname</th>
                         <th>E-mail</th>

@@ -46,7 +46,8 @@ a,a:hover,a:focus {
 }
 /*login page*/
 .login-body {
-    background:#32323A;
+    /*background:#32323A;*/
+    background:url(../images/lock-screen.jpg);
     background-size:cover;
     width:100%;
     height:100%;
@@ -59,18 +60,18 @@ a,a:hover,a:focus {
     -webkit-border-radius:5px;
 }
 .form-signin h2.form-signin-heading {
-    margin:0;
-    padding:35px 15px;
-    text-align:center;
-    background:#aec785;
-    border-radius:5px 5px 0 0;
-    -webkit-border-radius:5px 5px 0 0;
-    color:#fff;
-    font-size:18px;
-    text-transform:uppercase;
-    font-weight:300;
-    font-family:'Open Sans',sans-serif;
-    border-bottom:10px solid #a0b87e;
+        margin: 0;
+    padding: 35px 15px;
+    text-align: center;
+    background: #fbfbfb;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: #373736;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+    border-bottom: 10px solid #df0000;
 }
 .form-signin .checkbox {
     margin-bottom:14px;
@@ -102,12 +103,12 @@ a,a:hover,a:focus {
     font-size:12px;
 }
 .form-signin .btn-login {
-    background:#1fb5ac;
-    color:#fff;
-    text-transform:uppercase;
-    font-weight:300;
-    font-family:'Open Sans',sans-serif;
-    margin:20px 0 5px;
+       background: #df0000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+    margin: 20px 0 5px;
 }
 .form-signin p {
     text-align:left;
@@ -3386,7 +3387,7 @@ ul.clock-category li a:hover i,ul.clock-category li a.active i {
    float: right;
     width: 50%;
     text-align: center;
-    padding: 68px 0;
+        padding: 50px 0;
     font-size: 19px;
     color: #9466b5;
 }

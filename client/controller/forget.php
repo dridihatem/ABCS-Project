@@ -21,6 +21,7 @@ $conn = $db->connect();
                         $fecth = $que->fetch_assoc();
                         $nom_prenom = $fecth['nom'].' '.$fecth['prenom'];
                         $motpasse = $fecth['password'];
+                        $matricule = $fecth['matricule'];
    $mail = new PHPMailer;
    $mail->IsSMTP();
    // Set mailer to use SMTP
@@ -30,10 +31,9 @@ $conn = $db->connect();
    $mail->Username = username;                // SMTP username
    $mail->Password = password;                  // SMTP password
    $mail->SMTPSecure = SMTPSecure;                            // Enable encryption, 'ssl' also accepted
-   $mail->From = 'contact@abcs.com';
+   $mail->From = 'info@abcs.com.tn';
     $mail->FromName = 'ABCS';
-  $mail->AddAddress($_REQUEST['email'], 'ABCS');  // Add a recipient
-  $mail->AddAddress('contact@abcs.com' ,'ABCS');
+  $mail->AddAddress($_REQUEST['email'], 'ABCS'); 
        // Name is optional
         $mail->IsHTML(true);
         $body ='
@@ -130,8 +130,9 @@ a[x-apple-data-detectors] {
 Dear '.$nom_prenom.'<br /><br />
 
 
-<strong>My information :</strong><br />
-E-mail  : '.$_POST['email'].' <br />
+<strong>Your account details to access ABCS Pay Portal are as follows:</strong><br />
+
+Personal number  : '.$matricule.' <br />
 Password  : '.$motpasse.' <br />
 
 
@@ -171,7 +172,7 @@ Password  : '.$motpasse.' <br />
         header("location:../");
                       }
                       else {
-                        header("location:../register.php");
+                        header("location:../index.php?error");
                       }
                       
                       ?>

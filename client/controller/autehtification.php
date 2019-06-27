@@ -3,7 +3,7 @@
 header("Content-Type: text/plain ; charset=utf-8");
 header("Cache-Control: no-cache , private");
 header("Pragma: no-cache");
-
+session_set_cookie_params(0);
 session_start();
 error_reporting(0);
 require_once("../modules/Connection.class.php");
@@ -25,6 +25,7 @@ $row = $result->num_rows;
 $res = $result->fetch_assoc();
 		$_SESSION['idClient'] = $res['id'];
 		$_SESSION['matricule'] = $res['matricule'];
+		$_SESSION['fullnale'] = $res['nom'].' '.$res['prenom'];
 		
 		header("location:../index.php?pg=tableau-de-bord");
 	}else{

@@ -17,7 +17,7 @@
     <ul class="nav top-menu">
         <!-- settings start -->
         <li class="dropdown">
-            <h3 class="no-padding" style="margin-top: 0px;">Payslip Portal</h3>
+            <h3 class="no-padding" style="margin-top: 0px;">Pay Portal</h3>
 
             
         </li>
@@ -91,7 +91,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="index.php?pg=formRetenu&id=0">Add new</a></li>
-                        <li><a href="index.php?pg=adminRetenu">All Whithholding</a></li>
+                        <li><a href="index.php?pg=adminRetenu">All Certificates</a></li>
                         <li><a href="index.php?pg=adminFilterRetenu">Search</a></li>
 
                     </ul>

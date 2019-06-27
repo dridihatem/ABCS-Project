@@ -31,7 +31,7 @@
                                     <input type="hidden" value="<?php if($_GET['id']!=0){echo $account->getId();} ?>" name="id">
 
                                     <div class="form-group ">
-                                        <label for="matricule" class="control-label col-lg-3">Registration number</label>
+                                        <label for="matricule" class="control-label col-lg-3">Personal number</label>
                                         <div class="col-lg-6">
                                             <input class=" form-control" id="matricule" name="matricule" minlength="2" type="text" required value="<?php if($_GET['id']!=0){echo $account->getMatricule();} ?>"/>
                                             <span id="disp"></span>

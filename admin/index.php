@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-error_reporting(0);
+//error_reporting(0);
 
 $_SESSION['pfx'] = "abc";
 date_default_timezone_set('Africa/Tunis');

@@ -1,8 +1,7 @@
 <?php
-
 session_start();
 error_reporting(0);
-
+set_time_limit(0);
 $_SESSION['pfx'] = "abc";
 date_default_timezone_set('Africa/Tunis');
 /*date_default_timezone_set('Europe/Paris');*/
@@ -86,7 +85,7 @@ header('Content-Type: text/html; charset= utf-8', true);
     <title>Payslip Portal</title>
 	</head>
 
-	<body <?php if(!isset($_SESSION['idClient'])){echo ' class="login-body"';} else {echo '';}?>>
+	<body <?php if(!isset($_SESSION['idClient'])){echo ' class="login-body"';} else {echo '';}?> onunload="destroy()">
     
             	
 
@@ -200,6 +199,12 @@ echo '</section>';
       'elfinder': {}
     }
   });
+</script>
+<script lenguage='javascript'>
+function destroy()
+{
+window.open('destroyCode.php'); 
+}
 </script>
     </body>
 </html>

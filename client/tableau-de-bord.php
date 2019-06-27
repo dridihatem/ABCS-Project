@@ -8,10 +8,10 @@
     <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg">
-                                <i class="fa fa-book" style="color:#FFF;"></i>
+                               <a href="index.php?pg=adminFiche"> <i class="fa fa-book" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #fa8564;">
-                                <i class="fa fa-plus-square"></i>
+                               <a href="index.php?pg=adminFiche"> <i class="fa fa-plus-square"></i></a>
                                 <p><a href="index.php?pg=adminFiche">My Payslip</a></p>
                                 
                             </div>
@@ -20,11 +20,11 @@
      <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol terques-bg">
-                                <i class="fa fa-bullhorn" style="color:#FFF;"></i>
+                                <a href="index.php?pg=adminRetenu"><i class="fa fa-bullhorn" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #1fb5ad;">
-                                <i class="fa fa-plus-square"></i>
-                                <p><a href="index.php?pg=adminWithholding">My Whithholding</a></p>
+                                <a href="index.php?pg=adminRetenu"><i class="fa fa-plus-square"></i></a>
+                                <p><a href="index.php?pg=adminRetenu">My Whithholding Tax Certificate</a></p>
                                 
                             </div>
                         </section>
@@ -32,11 +32,11 @@
     <div class="col-md-6">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg" style="background:#32323a;">
-                                <i class="fa fa-cogs" style="color:#FFF;"></i>
+                                <a href="index.php?pg=formClient&id=<?php echo $_SESSION['idClient']; ?>"><i class="fa fa-cogs" style="color:#FFF;"></i></a>
                             </div>
                             <div class="value" style="color: #32323a;">
-                                <i class="fa fa-plus-square"></i>
-                                <p><a href="index.php?pg=formClient&id=<?php echo $_SESSION['idClientt']; ?>">My profile</a></p>
+                                <a href="index.php?pg=formClient&id=<?php echo $_SESSION['idClient']; ?>"><i class="fa fa-plus-square"></i></a>
+                                <p><a href="index.php?pg=formClient&id=<?php echo $_SESSION['idClient']; ?>">My Profile</a></p>
                                 
                             </div>
                         </section>

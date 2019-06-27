@@ -13,7 +13,7 @@
         else if(isset($_GET['disconnect'])){ ?>
         <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>You disconnect </strong> to the next
+        <strong>You have successfully </strong>logged out
         </div>
 
         <?php } ?>

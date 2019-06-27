@@ -15,7 +15,7 @@ if(isset($_SESSION["authentification"])){
         if($_GET['op']==3){
             $annonce = new Fiche();
             if($annonce->deleteFromDB($_GET["idMod"])){$et = "done";}else{$et = "err";}
-            header("location:../index.php?pg=".$_GET['pg']."=&info=".$et);
+            header("location:../index.php?pg=".$_GET['pg']."&info=".$et);
         }
 
         

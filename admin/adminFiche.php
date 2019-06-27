@@ -6,7 +6,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <header class="panel-heading">
-                      Paylist Lists
+                      PaySlips List
                         <span class="tools pull-right">
                             <a href="javascript:;" class="fa fa-chevron-down"></a>
                          </span>
@@ -18,11 +18,11 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Registration number</th>
+                        <th>Personal number</th>
                         <th>Name</th>
                         <th>Surname</th>
-                        <th>For month</th>
-                        <th>For year</th>
+                        <th>Month</th>
+                        <th>Year</th>
                         <th>File</th>
                         <th>Inserted date</th>
                         <th>Action</th>

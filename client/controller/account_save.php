@@ -36,10 +36,25 @@ if(isset($_SESSION["idClient"])){
             
 
            $client = new Accounts();
-           
+           $password = $_REQUEST["password"];
+
+// Validate password strength
+$uppercase = preg_match('@[A-Z]@', $password);
+$lowercase = preg_match('@[a-z]@', $password);
+$number    = preg_match('@[0-9]@', $password);
+$specialChars = preg_match('@[^\w]@', $password);
+
+if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+    header("location:../index.php?pg=".$_GET['pg']."&id=".$_REQUEST['id']."&msg=error");
+    }
+    else {
+
             $client->setAccounts($_REQUEST['id'],$_REQUEST['matricule'],$_REQUEST["password"],md5($_REQUEST["password"]),$_REQUEST["nom"],$_REQUEST["prenom"],$_REQUEST["email"],$_REQUEST["active"]);
             if($client->updateToDB()){$et = "done";}else{$et = "err";}
             header("location:../index.php?pg=".$_GET['pg']."&id=".$_REQUEST['id']."&info=".$et);
         }
-    }}else{header("Location: ../index.php?pg=tableau-de-bord");}
+    }
+}
+}
+
 ?>

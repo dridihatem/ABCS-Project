@@ -15,15 +15,16 @@
                          
                     <div class="adv-table">
                       <p>
-                        <h2>Email Confirmation</h2>
-<p>A confirmation link sent to your email address must be loaded before the account is enabled. This confirms that you have access to the email account stored in InPay.</p>
+                        
 
  <h2>Password Complexity</h2>
  <p>
-Passwords must be at least 8 characters long and contain 1 number, 1 Upper letter and 1 non-alphanumeric character.
-Maximum Incorrect Password Limit<br />
-If a password is entered incorrectly 6 times, you will no longer be able to login, even if the correct password is entered. You must go through the password reset process (or registration) to be able to login. An administrator may also change this password to enable/test the account.
-This limit is reset on every successful login.
+For security purposes, it is recommended to change the password when using the Pay Portal for the first time. Passwords must be at least 8 characters long and contain 1 number, 1 Upper letter and 1 non-alphanumeric character. 
+</p>
+
+<h2>Forgot Password</h2>
+ <p>
+Your password can be sent to your email address. This confirms that you have access to the email account stored in Pay Portal.
 </p>
 
 <h2>No Error Detail</h2>
@@ -32,7 +33,13 @@ No error detail is given for failed login attempts. Whilst this is not very help
 </p>
 <h2>Browser Compatibility</h2>
 <p>
-Whilst the system is compatible with all major browsers, users should not use versions of Internet Explorer older than 8
+Whilst the system is compatible with all major browsers, users should not use versions of Internet Explorer older than 8.
+
+
+                      </p>
+
+<p>
+
 
 
                       </p>

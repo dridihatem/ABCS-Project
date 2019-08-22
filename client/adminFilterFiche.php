@@ -170,7 +170,7 @@
                         <td><?php echo $account_client->getPrenom(); ?></td>
                         <td><?php echo $month_select; ?></td>
                         <td><?php echo $res_account['annee']; ?></td>
-                        <td><a href="../admin/documents/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
+                        <td><a href="../abcs@123Session/documents/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
 
                         
                     </tr>

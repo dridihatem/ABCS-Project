@@ -46,7 +46,7 @@ a,a:hover,a:focus {
 }
 /*login page*/
 .login-body {
-    background:#000;
+    background:#252525;
     /*background:url(../images/lock-screen.jpg);*/
     background-size:cover;
     width:100%;

@@ -103,7 +103,8 @@
                     </a>
                     
                 </li>
-                
+               <li><span style="font-size:10px;">Developed by : 
+<a href="http://www.synapseconsulting.tn" style="color:#FFF;font-size:10px;" target="_blank">Synapse consulting</a></span></li> 
                
             </ul>            
         </div>

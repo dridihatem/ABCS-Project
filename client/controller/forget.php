@@ -9,7 +9,9 @@ session_start();
 require_once("../modules/Connection.class.php");
 require_once("../modules/Accounts.class.php");
 require_once("../modules/SMTP.php");
-require_once ("../Library/MAILER/PHPmailer.php");
+/*require_once ("../Library/MAILER/PHPmailer.php");*/
+require '/usr/share/php/libphp-phpmailer/class.phpmailer.php';
+require '/usr/share/php/libphp-phpmailer/class.smtp.php';
 $db = new DB();
 $conn = $db->connect();
 
@@ -127,13 +129,13 @@ a[x-apple-data-detectors] {
                    <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
                      <tr style="border-collapse:collapse;"> 
                       <td align="left" style="padding:0;Margin:0;"> <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-family:arial, \'helvetica neue\', helvetica, sans-serif;line-height:21px;color:#333333;">
-Dear '.$nom_prenom.'<br /><br />
+Dear '.$nom_prenom.',<br /><br />
 
 
 <strong>Your account details to access ABCS Pay Portal are as follows:</strong><br />
 
-Personal number  : '.$matricule.' <br />
-Password  : '.$motpasse.' <br />
+<strong>Personal number  :</strong> '.$matricule.' <br />
+<strong>Password  :</strong> '.$motpasse.' <br />
 
 
 </p> </td> 
@@ -169,7 +171,7 @@ Password  : '.$motpasse.' <br />
         $mail->AltBody = '';
         $mail->CharSet = "UTF-8";
         $mail->Send();
-        header("location:../");
+        header("location:https://www.abcs.com.tn/");
                       }
                       else {
                         header("location:../index.php?error");

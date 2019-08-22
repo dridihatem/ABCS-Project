@@ -85,7 +85,7 @@ header('Content-Type: text/html; charset= utf-8', true);
     <title>Payslip Portal</title>
 	</head>
 
-	<body <?php if(!isset($_SESSION['idClient'])){echo ' class="login-body"';} else {echo '';}?> onunload="destroy()">
+	<body <?php if(!isset($_SESSION['idClient'])){echo ' class="login-body"';} else {echo '';}?>>
     
             	
 
@@ -200,10 +200,11 @@ echo '</section>';
     }
   });
 </script>
-<script lenguage='javascript'>
+
+<script>
 function destroy()
 {
-window.open('destroyCode.php'); 
+window.open('destroyCode.php', "_self"); 
 }
 </script>
     </body>

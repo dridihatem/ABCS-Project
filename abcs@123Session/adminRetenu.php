@@ -46,7 +46,7 @@
                         <td><a href="certificat/<?php echo $account_client->getMatricule(); ?>/<?php echo $res_account['pdf']; ?>" target="_blank"><img src="assets/images/pdf.png" /></a></td>
                         <td><?php echo date("d-m-Y",strtotime($res_account['date_creation'])); ?></td>
                         <td> <a class="btn btn-info" href="index.php?pg=formRetenu&id=<?php echo $res_account["id"];?>" title="Modifier"><i class="fa fa-pencil"></i></a>
-                                    <?php if($_SESSION['type']==1){ ?> <a class="btn btn-danger" href="controller/fiche_save.php?idMod=<?php echo $res_account["id"];?>&op=3&pg=<?php echo $_GET['pg']; ?>"><i class="fa fa-trash-o"></i> </a> <?php } ?></td>
+                                    <?php if($_SESSION['type']==1){ ?> <a class="btn btn-danger" href="controller/certificat_save.php?idMod=<?php echo $res_account["id"];?>&op=3&pg=<?php echo $_GET['pg']; ?>"><i class="fa fa-trash-o"></i> </a> <?php } ?></td>
                     </tr>
                     <?php 
                         }

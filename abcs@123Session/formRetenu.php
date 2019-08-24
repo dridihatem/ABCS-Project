@@ -28,7 +28,7 @@ $fiche->getFromDB($_GET['id']);
                         <div class="panel-body">
                             <?php require("msg.php");?>
                             <div class=" form">
-                                <form class="cmxform form-horizontal " id="commentForm" action="controller/fiche_save.php?op=<?php if($_GET["id"]== 0){echo "1&pg=adminRetenu";}else{echo "2&pg=formRetenu";}?>" method="post" enctype="multipart/form-data">
+                                <form class="cmxform form-horizontal " id="commentForm" action="controller/certificat_save.php?op=<?php if($_GET["id"]== 0){echo "1&pg=adminRetenu";}else{echo "2&pg=formRetenu";}?>" method="post" enctype="multipart/form-data">
                                     <input type="hidden" value="<?php if($_GET['id']!=0){echo $fiche->getId();} ?>" name="id">
                                     <input name="pdf" type="hidden" id="id" value="<?php if ($_GET["id"]!= 0){echo $fiche->getPdf();}?>"/>
                                     <input name="mois" type="hidden" id="id" value="0"/>
@@ -79,7 +79,7 @@ $fiche->getFromDB($_GET['id']);
                                     <div class="form-group ">
                                         <label for="prenom" class="control-label col-lg-3">File Pay</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="prenom" name="fichier" minlength="2" type="file" required/>
+                                            <input class=" form-control" id="prenom" name="fichier" minlength="2" type="file" />
                                         </div>
                                     </div>
                                      <div class="form-group ">
@@ -96,7 +96,7 @@ $fiche->getFromDB($_GET['id']);
                                             echo '
                                             <div class="gallery-item" style="background: #415160;border-radius: 10px;padding: 8px;width: 108px;margin: 0 auto;">
                                             <a href="documents/'.$client->getMatricule().'/'.$filee.'" target="_blank"><img src="assets/images/pdf2.png" style="width: 50px;"/></a>';
-                                            echo ' <a href="controller/fiche_save.php?idMod='.$_GET['id'].'&op=5&pg=formRetenu" style="color:#FFF;"><i class="fa fa-trash"></i> Supprimer</a>';
+                                            echo ' <a href="controller/certificat_save.php?idMod='.$_GET['id'].'&op=5&pg=formRetenu" style="color:#FFF;"><i class="fa fa-trash"></i> Supprimer</a>';
                                             echo '<div>';
                                         }
                                     }

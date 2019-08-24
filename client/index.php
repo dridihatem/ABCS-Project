@@ -13,6 +13,7 @@ $conn = $db->connect();
 	require_once("controller/diversFunction.php");
 	require_once("modules/Accounts.class.php");
 	require_once("modules/Fiche.class.php");
+  require_once("modules/Certificat.class.php");
 	require_once("modules/Administrator.class.php");
 	require_once("modules/Message.class.php");
 /*function sanitize_output($buffer) {

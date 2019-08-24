@@ -100,7 +100,7 @@ $fiche->getFromDB($_GET['id']);
                                     <div class="form-group ">
                                         <label for="prenom" class="control-label col-lg-3">File Pay</label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" id="prenom" name="fichier" minlength="2" type="file" required/>
+                                            <input class=" form-control" id="prenom" name="fichier" minlength="2" type="file" />
                                         </div>
                                     </div>
                                      <div class="form-group ">

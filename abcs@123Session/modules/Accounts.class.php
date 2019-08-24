@@ -76,6 +76,13 @@ class Accounts extends DB{
             $this->setAccounts($fetch["id"], $fetch["matricule"], $fetch["password"], $fetch["passwordcrypt"], $fetch["nom"],$fetch["prenom"],$fetch["email"],$fetch["active"]);
         }
     }
+     public function getFromDBBymatricule($id)
+    {
+        $res = $this->connect()->query(sprintf("SELECT * FROM " . $_SESSION['pfx'] . "_accounts WHERE matricule = '%s'", mysqli_real_escape_string($this->connect(), $id)));
+        while ($fetch = $res->fetch_assoc()) {
+            $this->setAccounts($fetch["id"], $fetch["matricule"], $fetch["password"], $fetch["passwordcrypt"], $fetch["nom"],$fetch["prenom"],$fetch["email"],$fetch["active"]);
+        }
+    }
     public function getCount()
     {
         $res = $this->connect()->query("SELECT COUNT(*) AS total FROM " . $_SESSION['pfx'] . "_accounts");

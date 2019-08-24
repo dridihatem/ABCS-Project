@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-//error_reporting(0);
+error_reporting(0);
 
 $_SESSION['pfx'] = "abc";
 date_default_timezone_set('Africa/Tunis');
@@ -147,6 +147,7 @@ echo '</section>';
 <link rel="stylesheet" href="assets/css/theme.css" type="text/css">
 <link rel="stylesheet" href="assets/themes/Material/css/theme.css" type="text/css">
   <script data-main="assets/js/main.default.js" src="assets/js/require.min.js"></script>
+
 <script>
   define('elFinderConfig', {
     // elFinder options (REQUIRED)
@@ -201,5 +202,178 @@ echo '</section>';
     }
   });
 </script>
+<script type="text/javascript">
+ function _(el) {
+  return document.getElementById(el);
+}
+
+function uploadFile() {
+  var file = _("file1").files[0];
+  // alert(file.name+" | "+file.size+" | "+file.type);
+  var formdata = new FormData();
+  formdata.append("file1", file);
+  var ajax = new XMLHttpRequest();
+  ajax.upload.addEventListener("progress", progressHandler, false);
+  ajax.addEventListener("load", completeHandler, false);
+  ajax.addEventListener("error", errorHandler, false);
+  ajax.addEventListener("abort", abortHandler, false);
+  ajax.open("POST", "controller/upload.php");
+  ajax.send(formdata);
+}
+
+function progressHandler(event) {
+  _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+  var percent = (event.loaded / event.total) * 100;
+  _("progressBar").value = Math.round(percent);
+  _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+}
+
+function completeHandler(event) {
+  _("status").innerHTML = event.target.responseText;
+  _("progressBar").value = 0;
+}
+
+function errorHandler(event) {
+  _("status").innerHTML = "Upload Failed";
+}
+
+function abortHandler(event) {
+  _("status").innerHTML = "Upload Aborted";
+}
+</script>
+<script type="text/javascript">
+function openModal() {
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('fade').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('fade').style.display = 'none';
+}
+        
+function loadAjax() {
+    document.getElementById('results').innerHTML = '';
+    openModal();
+    var xhr = false;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    }
+    else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (xhr) {
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                closeModal();
+                document.getElementById("results").innerHTML = xhr.responseText;
+            }
+        }
+        xhr.open("GET", "controller/databaseinsert.php", true);
+        xhr.send(null);
+    }
+}
+</script>
+<script type="text/javascript">
+function openModalA() {
+        document.getElementById('modalA').style.display = 'block';
+        document.getElementById('fadeA').style.display = 'block';
+}
+
+function closeModalA() {
+    document.getElementById('modalA').style.display = 'none';
+    document.getElementById('fadeA').style.display = 'none';
+}
+        
+function loadAjaxA() {
+    document.getElementById('results').innerHTML = '';
+    openModalA();
+    var xhr = false;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest();
+    }
+    else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (xhr) {
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                closeModalA();
+                document.getElementById("results").innerHTML = xhr.responseText;
+            }
+        }
+        xhr.open("GET", "controller/cleaninsert.php", true);
+        xhr.send(null);
+    }
+}
+</script>
+<style type="text/css">
+#fade {
+    display: none;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #ababab;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 92px;
+    height: 92px;
+    padding:30px 15px 0px;
+    border: 3px solid #ababab;
+    box-shadow:1px 1px 10px #ababab;
+    border-radius:20px;
+    background-color: white;
+    z-index: 1002;
+    text-align:center;
+    overflow: auto;
+}
+
+#fadeA {
+    display: none;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #ababab;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+
+#modalA {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 92px;
+    height: 92px;
+    padding:30px 15px 0px;
+    border: 3px solid #ababab;
+    box-shadow:1px 1px 10px #ababab;
+    border-radius:20px;
+    background-color: white;
+    z-index: 1002;
+    text-align:center;
+    overflow: auto;
+}
+
+#results {
+    font-size:1.25em;
+    color:green
+}
+</style>
     </body>
 </html>

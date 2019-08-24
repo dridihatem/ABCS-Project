@@ -102,6 +102,12 @@
                         <span>All files</span>
                     </a>
                 </li>
+                 <li>
+                    <a href="index.php?pg=formUpdate" <?php if($_GET['pg']=="formUpdate"){echo 'class="active"';} ?>>
+                        <i class="fa  fa fa-hdd-o"></i>
+                        <span>Insert Files</span>
+                    </a>
+                </li>
                 <li class="sub-menu">
                     <a href="javascript:;"   <?php if($_GET['pg']=="formUser" || $_GET['pg']=="adminUser"){echo 'class="active"';} ?>>
                         <i class="fa fa-th"></i>

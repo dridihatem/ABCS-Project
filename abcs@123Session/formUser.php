@@ -1,6 +1,6 @@
   <?php
         $admin= new Administrator();
-        $admin->getFromDB($_SESSION["authentification"]);
+        $admin->getFromDB($_GET['id']);
 ?>
 
 <section id="main-content">

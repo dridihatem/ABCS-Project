@@ -52,7 +52,7 @@
             </div>
         </section>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
                         <section class="panel weather-box">
                             <div class="symbol purple-bg" style="background: #ea434d;">
                                 <i class="fa fa-user"></i>
@@ -64,7 +64,7 @@
                             </div>
                         </section>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg">
                                 <a href="index.php?pg=formFiche&id=0"><i class="fa fa-book" style="color:#FFF;"></i></a>
@@ -76,7 +76,7 @@
                             </div>
                         </section>
     </div>
-     <div class="col-md-6">
+     <div class="col-md-4">
                         <section class="panel weather-box">
                             <div class="user-heading symbol terques-bg">
                                <a href="index.php?pg=formRetenu&id=0"> <i class="fa fa-bullhorn" style="color:#FFF;"></i></a>
@@ -88,7 +88,7 @@
                             </div>
                         </section>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
                         <section class="panel weather-box">
                             <div class="user-heading symbol red-bg" style="background:#32323a;">
                                <a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>"> <i class="fa fa-cogs" style="color:#FFF;"></i></a>
@@ -96,6 +96,18 @@
                             <div class="value" style="color: #32323a;">
                                 <a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>"><i class="fa fa-plus-square"></i></a>
                                 <p><a href="index.php?pg=formUser&id=<?php echo $_SESSION['authentification']; ?>">My Profile</a></p>
+                                
+                            </div>
+                        </section>
+    </div>
+    <div class="col-md-4">
+                        <section class="panel weather-box">
+                            <div class="user-heading symbol red-bg" style="background:#483a12;">
+                               <a href="index.php?pg=formUpdate&id=<?php echo $_SESSION['authentification']; ?>"> <i class="fa fa-hdd-o" style="color:#FFF;"></i></a>
+                            </div>
+                            <div class="value" style="color: #483a12;">
+                                <a href="index.php?pg=formUpdate"><i class="fa fa-plus-square"></i></a>
+                                <p><a href="index.php?pg=formUpdate">Update File</a></p>
                                 
                             </div>
                         </section>
